@@ -3,20 +3,20 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "笃志行",
+  tagline: "知识可以改变命运，坚持每天写点什么",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://dizhixing.github.io",
+  url: "https://dizhixing001.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/blog",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "dizhixing", // Usually your GitHub org/user name.
-  projectName: "dizhixing.github.io", // Usually your repo name.
+  organizationName: "dizhixing001", // Usually your GitHub org/user name.
+  projectName: "dizhixing001.github.io", // Usually your repo name.
   trailingSlash: false,
   deploymentBranch: "gh-pages", // 要把静态文件部署到的分支名称
 
@@ -27,21 +27,21 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "zh-Hans",
+    locales: ["zh-Hans"],
   },
 
   presets: [
     [
       "classic",
       {
-        docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
+        // docs: {
+        //   sidebarPath: "./sidebars.ts",
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        // },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -60,18 +60,18 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "笃志行",
       logo: {
-        alt: "My Site Logo",
-        src: "img/logo.svg",
+        alt: "站长头像",
+        src: "img/owner.jpg",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "tutorialSidebar",
+        //   position: "left",
+        //   label: "Tutorial",
+        // },
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/facebook/docusaurus",

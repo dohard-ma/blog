@@ -14,14 +14,12 @@ cd build
 
 git init
 git add -A
-git commit -m 'deploy'
-
-# 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:messiahhh/messiahhh.github.io.git master
+date=$(date -u +"%Y-%m-%d" -d "+8 hours")
+git commit -m "🚀 Deployed on $date"
 
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:messiahhh/blog.git master:gh-pages
-git push -f git@github.com:duzhixing001/blog.git master:gh-pages
+git push -f git@github.com:duzhixing001/duzhixing001.github.io.git master:gh-pages
 
 cd -
