@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 替换下面的命令为你实际想要执行的脚本或命令
+./scripts/deploy.sh
