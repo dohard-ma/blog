@@ -20,6 +20,6 @@ git commit -m "🚀 Deployed on $date"
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:messiahhh/blog.git master:gh-pages
-git push -f git@github.com:duzhixing001/duzhixing001.github.io.git master:gh-pages
+git push -f git@github.com:dohard-ma/dohard-ma.github.io.git master:gh-pages
 
 cd -
