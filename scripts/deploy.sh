@@ -14,7 +14,7 @@ cd build
 
 git init
 git add -A
-date=$(date -u +"%Y-%m-%d" -d "+8 hours")
+date=$(date -u +"%Y-%m-%d")
 git commit -m "🚀 Deployed on $date"
 
 
