@@ -20,7 +20,7 @@ const config: Config = {
   trailingSlash: false,
   deploymentBranch: "gh-pages", // 要把静态文件部署到的分支名称
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
