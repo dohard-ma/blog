@@ -62,7 +62,7 @@ const config: Config = {
       title: "笃志行",
       logo: {
         alt: "站长头像",
-        src: "img/owner.jpg",
+        src: "img/owner.webp",
       },
       items: [
         // {
