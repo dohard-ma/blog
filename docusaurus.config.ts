@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+const path = require("path");
 
 const config: Config = {
   title: "笃志行",
@@ -35,18 +36,22 @@ const config: Config = {
     [
       "classic",
       {
-        // docs: {
-        //   sidebarPath: "./sidebars.ts",
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        // },
+        docs: {
+          sidebarPath: "./sidebars.ts",
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl: "https://github.com/dohard-ma/blog/blob/main/",
+        },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/dohard-ma/blog/blob/main/",
+          // blogListComponent: "@theme/BlogListPage",
+          blogListComponent: path.resolve(
+            __dirname,
+            "src/components/blogListComponent/index.tsx"
+          ),
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -65,12 +70,8 @@ const config: Config = {
         src: "img/owner.webp",
       },
       items: [
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "tutorialSidebar",
-        //   position: "left",
-        //   label: "Tutorial",
-        // },
+        { to: "/docs", label: "Docs", position: "left" },
+
         { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/dohard-ma/blog",
@@ -120,7 +121,17 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
+    // mermaid: {
+    //   options: {
+    //     maxTextSize: 50,
+    //   },
+    // },
   } satisfies Preset.ThemeConfig,
+  themes: ["@docusaurus/theme-mermaid"],
+  markdown: {
+    mermaid: true,
+  },
 };
 
 export default config;
