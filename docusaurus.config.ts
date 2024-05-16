@@ -48,10 +48,10 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/dohard-ma/blog/blob/main/",
           // blogListComponent: "@theme/BlogListPage",
-          blogListComponent: path.resolve(
-            __dirname,
-            "src/components/blogListComponent/index.tsx"
-          ),
+          // blogListComponent: path.resolve(
+          //   __dirname,
+          //   "src/components/blogListComponent/index.tsx"
+          // ),
         },
         theme: {
           customCss: "./src/css/custom.css",
