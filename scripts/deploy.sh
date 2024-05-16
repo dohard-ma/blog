@@ -3,6 +3,15 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+# 获取当前 Git 分支名称
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+# 检查当前是否在 main 分支
+if [ "$current_branch" != "main" ]; then
+    echo "This script must be run from the main branch."
+    exit 1
+fi
+
 # 生成静态文件
 npm run build
 
