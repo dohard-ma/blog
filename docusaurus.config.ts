@@ -2,6 +2,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 const path = require("path");
+import tailwindPlugin from "./plugins/tailwind-plugin"; // add this
 
 const config: Config = {
   title: "笃志行",
@@ -31,6 +32,8 @@ const config: Config = {
     defaultLocale: "zh-Hans",
     locales: ["zh-Hans"],
   },
+
+  plugins: [tailwindPlugin],
 
   presets: [
     [

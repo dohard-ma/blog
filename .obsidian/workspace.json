@@ -1,0 +1,165 @@
+{
+  "main": {
+    "id": "b507b751a4ab519b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d43596337abc1da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47bd9b5a497aa6ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/2024-05-16.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fe96e7c0700d5aac",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb1f21d96d59388",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad46d29972e517fc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2f37f51d6bb642cd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "54a4f7d3aec5e2f3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 356.5
+  },
+  "right": {
+    "id": "4cce1eb456b936e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "3399396d528f29a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e70e456ba5c857de",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "blog/2024-05-16.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a722453f7805c9a7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "blog/2024-05-16.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "860b7a0928d92ec9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d487fb30d590da0b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "blog/2024-05-16.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "47bd9b5a497aa6ff",
+  "lastOpenFiles": [
+    "blog/2024-05-21.md",
+    "blog/2024-05-14.md",
+    "blog/2024-05-20.md",
+    "Excalidraw/Drawing 2024-05-21 10.48.39.excalidraw.md",
+    "blog/Drawing 2024-05-21 11.08.50.excalidraw.md",
+    "blog/2024-05-11.md",
+    "Excalidraw/fonts/字语青梅硬笔.ttf",
+    "Excalidraw/fonts",
+    "未命名",
+    "Excalidraw",
+    "blog/2024-05-13.md",
+    "blog/2024-05-09.md"
+  ]
+}
