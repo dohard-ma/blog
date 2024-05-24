@@ -1,46 +1,12 @@
-import clsx from "clsx";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
+import Layout from "../layouts/main";
+import Home from "@site/src/components/Home";
 
 import styles from "./index.module.css";
-import Header from "../components/Header1";
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+export default function HomePage(): JSX.Element {
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-      </div>
-    </header>
-  );
-}
-
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-  const techs = [
-    "HTML",
-    "(S)CSS",
-    "Vue.js",
-    "Next.js",
-    "Javascript (ES6+)",
-    "Express",
-    "Node.js",
-  ];
-  const socials = [
-    { name: "Email", url: "mailto:kholid060@gmail.com" },
-    { name: "GitHub", url: "https://github.com/kholid060" },
-    { name: "Twitter", url: "https://twitter.com/kholid060" },
-  ];
-
-  return (
-    <main className="antialiased bg-white dark:bg-neutral-950">
-      <Header />
-    </main>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
