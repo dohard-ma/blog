@@ -5,7 +5,7 @@ const path = require("path");
 import tailwindPlugin from "./plugins/tailwind-plugin"; // add this
 
 const config: Config = {
-  title: "笃志行",
+  title: "dohard",
   tagline: "知识可以改变命运，坚持每天写点什么",
   favicon: "img/favicon.ico",
 
@@ -67,7 +67,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "笃志行",
+      title: "dohard",
       logo: {
         alt: "站长头像",
         src: "img/owner.webp",
