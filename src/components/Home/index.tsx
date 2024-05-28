@@ -2,6 +2,8 @@ import clsx from "clsx";
 import Heading from "@theme/Heading";
 import styles from "./styles.module.css";
 import Button from "../Button";
+import Separator from "../Separator";
+import Writings from "../Writings";
 
 type FeatureItem = {
   title: string;
@@ -91,7 +93,7 @@ export default function Home(): JSX.Element {
               </div>
               <div className="relative z-30 px-10 translate-x-0 -translate-y-px border border-dashed rounded-2xl bg-gradient-to-r dark:from-neutral-950 dark:via-black dark:to-neutral-950 from-white via-neutral-50 to-white border-neutral-300 dark:border-neutral-700">
                 <img
-                  src="/img/20240508-182449.jpg"
+                  src="/img/20240508-183733-removebg-preview.png"
                   loading="eager"
                   decoding="auto"
                   className="relative z-30 w-full object-contain aspect-[790/1189] md:max-w-md mx-auto dark:-translate-y-0.5 rounded"
@@ -103,10 +105,8 @@ export default function Home(): JSX.Element {
         </div>
       </div>
 
-      {/* <Separator text="Check out my projects" />
-      <Projects />
       <Separator text="Some of my writing" />
-      <Writings /> */}
+      <Writings />
     </>
   );
 }
