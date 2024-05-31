@@ -1,0 +1,61 @@
+---
+import PageHeading from "../components/page-heading.astro";
+import PostsLoop from "../components/posts-loop.astro";
+import Layout from "../layouts/main.astro";
+import DropdownMenu from "../components/menus.astro";
+import type { Menu } from "../components/menus.astro";
+
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+const years = [
+  ...new Set(posts.map((post) => new Date(post.data.pubDate).getFullYear())),
+];
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+console.log({ years, tags });
+
+const formatMonth = (month: number) => `${month + 1}月`;
+
+const groupedData = posts.reduce((acc: Menu[], post) => {
+  const date = new Date(post.data.pubDate);
+  const year = date.getFullYear();
+  const month = formatMonth(date.getMonth());
+
+  let yearGroup = acc.find((group) => group.year === year.toString());
+  if (!yearGroup) {
+    yearGroup = { year: year.toString(), months: [] };
+    acc.push(yearGroup);
+  }
+
+  let monthGroup = yearGroup.months.find((m) => m.month === month);
+  if (!monthGroup) {
+    monthGroup = { month: month, items: [] };
+    yearGroup.months.push(monthGroup);
+  }
+
+  monthGroup.items.push({
+    ...post.data,
+    slug: post.slug,
+  });
+
+  return acc;
+}, []);
+---
+
+<Layout title="My Writing">
+  <div class="container mx-auto flex max-w-5xl">
+    <div class="hidden w-48 sm:block ml-6">
+      <DropdownMenu data={groupedData} />
+    </div>
+    <section class="flex-1 p-4 ml-6">
+      <PageHeading
+        title="My Writing"
+        description="Dive into my musings on life and tech in my latest posts; a blend of introspection and innovation. Keep an eye out for fresh insights and updates!"
+      />
+
+      <div class="z-50 flex flex-col items-stretch w-full gap-5 my-8">
+        <PostsLoop count="10" />
+      </div>
+    </section>
+  </div>
+</Layout>

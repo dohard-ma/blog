@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Left Right Layout with Tailwind CSS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto my-10 px-20 flex">
+      <!-- 左侧固定宽度200px -->
+      <div class="w-48 bg-white p-4 shadow-lg">
+        <h2 class="text-xl font-bold mb-4">左侧内容</h2>
+        <p>这里是左侧固定宽度的内容区域。</p>
+      </div>
+      <!-- 右侧自适应宽度 -->
+      <div class="flex-1 bg-white p-4 ml-6 shadow-lg">
+        <h2 class="text-xl font-bold mb-4">右侧内容</h2>
+        <p>这里是右侧自适应宽度的内容区域。</p>
+        <p>你可以在这里放置更多内容。</p>
+      </div>
+    </div>
+  </body>
+</html>

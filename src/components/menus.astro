@@ -1,0 +1,96 @@
+---
+export type Menu = {
+  year: string;
+  months: {
+    month: string;
+    items: {
+      slug: string;
+      title: string;
+      pubDate: Date;
+      description: string;
+      tags: string[];
+    }[];
+  }[];
+};
+
+const { data = [] } = Astro.props;
+
+const menuData = data.filter((i: Menu) => i.months.length > 0) as Menu[];
+---
+
+<style>
+  .accordion-content {
+    @apply hidden;
+  }
+  .accordion-content.show {
+    @apply block;
+  }
+</style>
+
+<div class="w-full max-w-xs mx-auto text-gray-500 dark:text-neutral-600">
+  {
+    menuData.map((yearData) => (
+      <div class="mt-4">
+        <button
+          class="w-full text-left px-4 py-2 bg-gray-100 rounded-lg flex font-bold justify-between items-center focus:outline-none dark:bg-black"
+          data-year={yearData.year}
+        >
+          <span>{yearData.year}年</span>
+          <span
+            class={`transform transition-transform duration-200 icon-${yearData.year}`}
+          >
+            &#9656;
+          </span>
+        </button>
+        <div
+          class={`accordion-content pl-4 mt-4 content-${yearData.year} show`}
+        >
+          {yearData.months.map((monthData) => (
+            <div class="mt-4">
+              <h4 class="text-sm ">{monthData.month}</h4>
+              <div class="border-l border-solid border-l-slate-400">
+                {monthData.items.map((item) => (
+                  <a
+                    href={"/post/" + item.slug}
+                    class="block pl-4 text-sm mt-2 truncate cursor-pointer"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  const buttons = document.querySelectorAll("button[data-year]");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const year = button.getAttribute("data-year");
+      const content = document.querySelector(`.content-${year}`);
+      const icon = document.querySelector(`.icon-${year}`);
+      content?.classList.toggle("show");
+      icon?.classList.toggle("rotate-90");
+    });
+  });
+
+  //   document.addEventListener("click", (event) => {
+  //     buttons.forEach((button) => {
+  //       const year = button.getAttribute("data-year");
+  //       const content = document.querySelector(`.content-${year}`);
+  //       const icon = document.querySelector(`.icon-${year}`);
+  //       if (
+  //         event.target &&
+  //         !button.contains(event.target as Node) &&
+  //         !content!.contains(event.target as Node)
+  //       ) {
+  //         content?.classList.remove("show");
+  //         icon?.classList.remove("rotate-90");
+  //       }
+  //     });
+  //   });
+</script>

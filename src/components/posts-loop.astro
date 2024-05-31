@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import Post from "./post.astro";
+
+const { count } = Astro.props;
+const allPosts = await getCollection("posts");
+const postsLoop = allPosts.slice(0, count);
+---
+
+{
+  postsLoop.map((post) => {
+    return (
+      <Post
+        slug={post.slug}
+        title={post.data.title}
+        description={post.data.description}
+        pubDate={post.data.pubDate}
+      />
+    );
+  })
+}
