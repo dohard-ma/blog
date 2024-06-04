@@ -48,10 +48,7 @@ const groupedData = posts.reduce((acc: Menu[], post) => {
       <DropdownMenu data={groupedData} />
     </div>
     <section class="flex-1 p-4 ml-6">
-      <PageHeading
-        title="My Writing"
-        description="Dive into my musings on life and tech in my latest posts; a blend of introspection and innovation. Keep an eye out for fresh insights and updates!"
-      />
+      <PageHeading title="My Writing" description="每天写点什么!" />
 
       <div class="z-50 flex flex-col items-stretch w-full gap-5 my-8">
         <PostsLoop count="10" />
